@@ -18,21 +18,18 @@ var UserSchema = mongoose.Schema({
     }
 });
 
-// module.exports.getUserByUsername = function(username, callback){
-UserSchema.methods.getUserByUsername = function(username, callback) {
+UserSchema.statics.getUserByUsername = function(username, callback) {
     var query = {
-        username: username
+        username
     };
     User.findOne(query, callback);
 }
 
-// module.exports.getUserById = function(id, callback){
-UserSchema.methods.getUserById = function(id, callback) {
+UserSchema.statics.getUserById = function(id, callback) {
     User.findById(id, callback);
 }
 
-// module.exports.comparePassword = function(candidatePassword, hash, callback){
-UserSchema.methods.comparePassword = function(candidatePassword, hash, callback) {
+UserSchema.statics.comparePassword = function(candidatePassword, hash, callback) {
     bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
         if (err) throw err;
         callback(null, isMatch);
@@ -55,6 +52,4 @@ UserSchema.pre('save', function(next) {
 });
 
 var User = mongoose.model('User', UserSchema);
-module.exports = {
-    User
-};
+module.exports = {User};
