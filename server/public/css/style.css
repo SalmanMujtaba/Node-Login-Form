@@ -1,0 +1,25 @@
+#card-center {
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 30%;
+margin-top: 140px;
+}
+
+#login-center {
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 30%;
+}
+
+.navbar {
+  position: relative;
+}
+
+main {
+  margin-top: 3rem;
+
+}

@@ -1,0 +1,53 @@
+<form method="post" action="/users/register">
+    <!--Form with header-->
+    <div class="card" id="card-center">
+        <div class="card-block">
+
+            <!--Header-->
+            <div class="form-header purple darken-4">
+                <h3><i class="fa fa-user"></i> Register:</h3>
+            </div>
+
+            {{#if errors}} {{#each errors}}
+            <div class="alert alert-danger">{{msg}}</div>
+            {{/each}} {{/if}}
+
+            <!--Body-->
+            <div class="md-form">
+                <i class="fa fa-user prefix"></i>
+                <input type="text" id="form1" class="form-control" name="name">
+                <label for="form1">Your name</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-user prefix"></i>
+                <input type="text" id="form2" class="form-control" name="username">
+                <label for="form2">Your username</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix"></i>
+                <input type="email" id="form3" class="form-control validate" name="email">
+                <label for="form3" data-error="wrong" data-success="right">Your email</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-lock prefix"></i>
+                <input type="password" id="form4" class="form-control validate" name="password">
+                <label for="form4">Your password</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-lock prefix"></i>
+                <input type="password" id="form5" class="form-control" name="password2">
+                <label for="form5">Confirm Your password</label>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-deep-purple" type="submit">Sign up</button>
+            </div>
+
+        </div>
+    </div>
+    <!--/Form with header-->
+</form>
