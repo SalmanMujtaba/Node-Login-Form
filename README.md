@@ -1,0 +1,1 @@
+The Node Login Form is a simple login and registration page, which makes use of Passport.js for authentication. The user data is stored in Mongo DB, after the password is hashed(appended with salt). The UI is created using MDB(Material Design Boostrap), which makes it somewhat responsive).
